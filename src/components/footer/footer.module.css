@@ -1,0 +1,41 @@
+.footercontainer {
+    outline: 0px solid;
+    position: relative;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 25vw);
+    grid-template-rows: 16vh;
+    border-radius: 3vh;
+    background: linear-gradient(to right, rgb(113, 75, 170), rgb(145, 142, 149));
+
+}
+
+.col {
+    border-radius: 3vh;
+    outline: 0px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    
+}
+
+.col img{
+    object-fit: cover;
+    width: 4vw;
+    margin-top: 2vh;
+    outline: 0px solid;
+    margin-right: 1vw;
+    border-radius: 400vh;
+    margin-left: 1vw;
+    
+}
+
+.col h3{
+    outline: 0px solid;
+}
+
+.col ul {
+  margin: 0vh;
+    
+    
+}

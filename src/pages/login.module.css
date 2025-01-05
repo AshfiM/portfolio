@@ -1,0 +1,209 @@
+.logobox {
+    grid-column: 1;
+    border-radius: 1vw;
+    outline: 0px solid;
+    margin: 1vw;
+    overflow: hidden;
+    background: linear-gradient(rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5)), 
+   
+
+}
+.logobox img {
+    width:25%;
+    height: 25%;
+    object-fit:contain;
+    border-radius: 3vh;
+
+}
+
+.rform {
+outline: 1px solid;
+display: grid;
+grid-template-columns: 50vw 50vw;
+margin-top: 5vh;
+background:linear-gradient(to right, rgb(113, 75, 170), rgb(145, 142, 149)) ;
+border-radius: 1vh;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.loginform {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    grid-column: 1;
+    outline: 0px solid;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to right, rgb(113, 75, 170), rgb(145, 142, 149));
+    margin: 1vw;
+    border-radius: 1vh;
+    width: 49vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+
+}
+
+.signupcolumn {
+    grid-column: 2;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to right, rgb(120, 108, 136),rgb(113, 75, 170));
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    border-radius: 1vh;
+    width: 47vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+.signupcolumn h3{
+    margin-bottom: 4vh;
+}
+.signupcolumn button {
+    margin: 2vh;
+    font-size: large;
+    font-family: 'sans-serif';
+    width: 20vw;
+    height: 5vh;
+    border-radius: 2vw;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(215, 212, 212);
+}
+
+
+.signupcolumn button:hover {
+    background-color: rgba(90, 13, 120, 0.38);
+}
+
+.slink{
+    outline: 0px solid;
+    text-decoration: none;
+    padding-top: 1.25vh;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    font-family: 'sans-serif';
+    padding-right: 6vw;
+    padding-left: 6vw;
+    padding-bottom: 1.25vh;
+    border-radius: 3vh;
+    background-color: rgb(215, 212, 212);
+}
+
+.slink:hover {
+    background-color: rgba(90, 13, 120, 0.38);
+    
+}
+.usernamecontainer {
+    outline: 0px solid;
+    margin: 2vh;
+
+}
+
+.usernamecontainer label {
+    display: block;
+    margin: 2vh;
+    text-align: start;
+    font-size: large;
+    font-family: 'sans-serif';
+    font-weight: bold;
+}
+.usernamecontainer input {
+    margin: 2vh;
+    font-size: 2vh;
+    font-weight: bolder;
+    font-family: 'sans-serif';
+    width: 20vw;
+    height: 5vh;
+    border-radius: 2vw;
+   border-width: 5px;
+   border-color: rgb(83, 10, 10);
+   background-color: rgb(215, 212, 212);
+}
+
+.usernamecontainer input:hover {
+    border-color: rgba(141, 13, 4, 0.383);
+}
+
+.passwordcontainer {
+    outline: 0px solid;
+    margin: 2vh;
+}
+
+.passwordcontainer label {
+    display: block;
+    text-align: start;
+    margin: 2vh;
+    font-size: large;
+    font-family: 'sans-serif';
+    font-weight: bold;
+}
+.passwordcontainer input {
+    background-color: rgb(215, 212, 212);
+    margin: 2vh;
+    font-size: 3vh;
+    font-family: 'sans-serif';
+    width: 20vw;
+    height: 5vh;
+    border-radius: 2vw;
+    letter-spacing: 5px;
+    font-weight: bolder;
+    border-radius: 2vw;
+    border-width: 5px;
+    border-color: rgb(83, 10, 10);
+}
+
+.passwordcontainer input:hover {
+    border-color: rgba(141, 13, 4, 0.383);
+}
+
+.buttoncontainer {
+    outline: 0px solid;
+    margin: 2vh;
+}
+
+.buttoncontainer button {
+    margin: 2vh;
+    font-size: large;
+    font-family: 'sans-serif';
+    width: 20vw;
+    height: 5vh;
+    border-radius: 2vw;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(215, 212, 212);
+}
+
+.buttoncontainer button:hover {
+    background-color: rgba(90, 13, 120, 0.38);
+}
+
+.linkcontainer {
+    outline: 0px solid;
+    margin: 2vh;
+}
+
+.rlink {
+    margin: 1vh;
+    font-size: large;
+    font-family: 'sans-serif';
+    width: 20vw;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+.checkbox {
+    display: inline;
+    margin: 2vw;
+    font-size: large;
+    font-family: 'sans-serif';
+    font-weight: bold;
+    
+}
+.checkbox input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.5);
+}

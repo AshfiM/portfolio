@@ -1,0 +1,133 @@
+API calls and backend interaction
+
+array destructuring, way to get an in individual item from an array of items and save those individual components
+as  separate components
+
+let veggies = [onion, carrot]
+
+const [v1, v2] = veggies;
+console.log(v1) // onion
+
+object destructuring, destructre using its exact property name as the destructured variable
+
+useState hook use an array for return value
+useState hook allows to work with state in components
+
+side effect, makes a function impure, pure functions don't have side effects, impure functions do.
+
+pure functions returns same output no matter how many times it invoked
+impure functions have some external functions; console.log(), fetch
+
+useEffect() hook used to handle impure actions, all impure actions should be inside a specific area
+useEffect() run after React updated the DOM
+if effect returns a function it will be executed when ever clean up needed, when component unmount
+when useEffect dependency array is empty useEffect run only once, if it is not given it will run as many times
+
+hooks rule
+only call inside the react component functions
+only call hooks at the top level of the component, call outside the loops, conditions and before return statement
+call multiple state or effect hooks, hook calls outside the conditions
+make multiple hook calls in the same sequence
+
+fetch, make a server request to retrieve JSON data
+fetchAPI a set of functions for fetch
+
+single threaded execution, next step cannot be executed bfore the completion of current step
+fetch() is fazzard function, it seems to be part of javascript  but it is a way to call webAPI from javascript
+acces a browser functionality outside of javascript.
+
+promise, an object returned by an asyncronous function which represnts the current state of an operation
+at the time promise returned to the caller operation isn't finished but promise object provide methods
+to handle the eventual success or failure of the operation
+
+async, make a function asyncronous, place it before the function
+
+const [state, dispatch] = useReducer(reducer, intial state), reducer function return the new state, 
+dispatch function takes action as the only argument,react send the state and action to reducer function
+reducer function write as switch statement
+useReducer is used when the state is complex and next state depends on previous state
+
+const ref = useRef(0), return an object with one property current, inital value can be anything it is igonred after first render
+changing ref property do trigger re-rendering, does not reset its value after re-render, information is 
+local 
+
+jsx, extension to javascript, react uses jsx to describe ui appearance
+each node in the component tree is a plain javascript object/element that describ the component instance or dom node
+an element is wat to describe final html output as plain output
+each element consists 2 prperties, type and props, type describe what kind of element like button points toward the component,
+props consists all objects the component receives.
+element tree converts to dom elements, virtual dom, a javascript alternative representation of the real dom
+ui changes, build a new element tree, compare it with previous tree, calculate difference in the tree 
+using diff operation, based on the difference it make minimal changes to the underlaying dom nodes to process 
+the updates
+
+componet composition, containment and specialization
+containment, fact that children are unknown ahead of time
+for dialog boxes, pass children prop directly as the content, it will become generic conponent that accept
+any valid jsx as children, containment feature
+specialization, the component is a speacial case for another component, ComfirmationDialog comp is special case
+comp of Dialog comp
+
+React Fragment tag or <></> emptytag grouping children without adding extra nodes
+
+React top level elements, used to manipulate and transform elements, 
+ways of importing elements from react package
+
+react.cloneElement effectively clone and return a new element of a provided element
+cloneElement(element, [props]),props that to be added to the clone comp,
+props are immutable ojects, using cloneElement operation performed on cloned element,
+cloneElement used to modify and add properties, extend children functionality,
+
+react.children provide utilities to work with props.children data structure
+
+spread operator [...object/array/string]
+copy, newvariable = {...originalvaraible}
+merge, newvariable = {...originalvaraible, modifyproperty:value}, should happen inorder
+
+higher order component enahance a component by providing new props to it
+cross-cutting-concerns,hoc, higher order component, a function that takes a component 
+as argument return a new component
+
+const withSubscription = (WrappedComponent) => {
+    return (props) => {
+        return <WrappedComponent {...props}/>
+    }
+
+}
+never mutate the hoc and pass unrelated props to the WrappedComponent
+
+render props, take functions that return react elements, call them inside their render logic
+enhance original component without modifying original component
+way of injecting the new props is differs hoc,
+
+const Comp = ({render}) => {
+
+    const [data, setData] = useState({})
+
+    return render(data)
+}
+render props is a functions that return some jsx
+<Comp render = {(data) => <h1>data.property</h1>}
+
+Comp does not take care of any visualization logic, it encapsulate cross-cutting concerns
+return the result(data) of calling render function
+
+test, avoid including implimentation details, work with dom nodes, resemsble software usage
+jest and react testing library, tesing tools
+jest, javascript test runner that allow acces to artificial dom, js dom, approximation of how browser works
+features, mocking, ensure unit tesing standalone,
+react tesing library, set of utilities, test component with out knowing implimentation
+
+mock function, tracl a perticular function called by a external code
+
+ci, continous integration, working on long feedback loop is risky, introducing new changes is time consuming
+ci tool monitors the central code repository and prevents people from when and how to run the test
+new commit accepted, if the all automated test cases passed.
+
+continous interaction is a small part of continous delivery
+when new commit, a new app will be built and set of test cases will be run on that
+
+components are functions that take data or props as input return an element tree,
+elements are plain javascript objects, offers a light weight representation of the dom,
+cross-cutting concerns refers to the generic functionality that is not related to business logic
+handling errors, authentication, fetching
