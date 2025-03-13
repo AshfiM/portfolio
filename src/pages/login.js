@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { Link} from "react-router-dom";
-import styles from "/Users/ashfi/Desktop/react/react-components/src/pages/login.module.css"
-import Logo from "../assets//header1logo.jpg"
+import styles from "./login.module.css"
+import Logo from "../assets/header1logo.jpg"
 
 const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [ischecked, setischecked] = useState(false)
-
     const handleLogin = (e) => {
         e.preventDefault();
         console.log("email", email,"\npassword", password,"\nremeberme", ischecked)

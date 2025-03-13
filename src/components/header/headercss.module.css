@@ -28,7 +28,10 @@
 }
 
 .linkbox {
-    grid-column: 2;
+    grid-column: 3;
+    justify-self: end;
+    align-items: center;
+    display: flex;
     grid-row: 1;
    outline: 0px solid;
    margin: 1vw;
@@ -37,22 +40,22 @@
 }
 
 .link {
-    padding-left: 2vw;
-    padding-right: 2vw;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding: 1vw;
     outline: 0px solid;
     border-radius: 2vw;
     margin: 1vw;
     background-color: rgb(155, 143, 143);
-    font-size: medium;
     color: black;
-    font-family:'sans-serif';
+    font-family:'Times New Roman', Times, serif;
     font-size: large;
     font-weight: bold;
     cursor:pointer;
     text-decoration: none;
     border: none;
+    text-align: center;
+    white-space: nowrap;
+    width: 6vw;
+    
    
 }
 .link:hover {

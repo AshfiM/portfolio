@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../components/header/header";
 import { Outlet } from "react-router-dom";
-import Footer from "../components/footer/footer";
 import styles from "../routes/layout.module.css"
 
 const LayoutWithHeader = () => 
@@ -13,7 +12,7 @@ const LayoutWithHeader = () =>
                 
             </main>
             
-            <Footer/>
+           
         </div>
     )
 

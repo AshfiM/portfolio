@@ -1,8 +1,8 @@
 import React from "react"
 import { Routes, Route} from 'react-router-dom';
-import Page1 from '/Users/ashfi/Desktop/react/react-components/src/pages/page1.js';
-import Page2 from '/Users/ashfi/Desktop/react/react-components/src/pages/page2.js';
-import Page3 from '/Users/ashfi/Desktop/react/react-components/src/pages/page3.js';
+import Page1 from '../pages/page1.js';
+import Page2 from '../pages/page2.js';
+import Page3 from '../pages/page3.js';
 import Login from "../pages/login";
 import LayoutWithHeader from "./withheader";
 import LayoutWithoutHeader from "./withoutheader";

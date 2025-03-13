@@ -1,0 +1,143 @@
+.page1{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 82vh;
+    background-color: rgb(242, 243, 244);
+    border-radius: 1%;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }    
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.introcontainer {
+    grid-column: 1;
+    outline: 0px solid;
+    width: 100%;
+    line-height: 0.1;
+    text-align: start;
+    position: relative;
+    
+
+}
+
+.intro {
+    font-size: 4vh;
+    margin-top: 18vh;
+}
+
+
+.summary {
+line-height: 1.2;
+width: 70%;
+
+}
+
+
+.summary p {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+    text-align: justify;
+}
+.buttoncontainer {
+    width: 30%;
+    display: inline;
+    justify-items: center;
+    align-items: center;
+}
+
+.buttoncontainer button {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.buttons {
+    margin: 1vw;
+    font-size: 3vh;
+    border-radius: 0.5vw;
+    width: 10%;
+    padding: 0.5%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.linkcontainer {
+    margin: 4%;
+    
+}
+
+.link {
+    padding: 1%;
+    outline: 0px solid;
+    border-radius: 0.3vw;
+    margin-right: 3vw;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.5vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background-attachment: fixed;
+    background-color: azure;
+}
+
+.link:hover {
+    background-color: burlywood;
+}
+.logocontainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 30%; 
+}
+
+
+.logos {
+    border: 6px rgb(70, 51, 87) solid;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(148, 115, 172);    
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+.logos {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.logos:hover {
+    background-color: rgb(177, 161, 184);
+}
+
+.logobox {
+    margin: 20px;
+}
+.imagecontainer {
+    grid-column: 2;
+    outline: 0px solid;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.profile {
+    width: 60%;
+    padding: 20%;
+    border-radius: 50%;
+    
+}
+
+.imagecontainer img {
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}

@@ -1,6 +1,6 @@
 import React, {useState}from "react";
 import { Link} from "react-router-dom";
-import styles from "/Users/ashfi/Desktop/react/react-components/src/pages/login.module.css"
+import styles from "./login.module.css"
 import Logo from "../assets//header1logo.jpg"
 
 const Signup = () => {

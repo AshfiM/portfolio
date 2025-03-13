@@ -1,11 +1,13 @@
 import React from "react";
-import styles from "../footer/footer.module.css"
-import footerLogo from "/Users/ashfi/Desktop/react/react-components/src/assets/header1logo.jpg"
-import fblogo from "/Users/ashfi/Desktop/react/react-components/src/assets/fblogo.png"
-import instalogo from "/Users/ashfi/Desktop/react/react-components/src/assets/instalogo.png"
-import gmaillogo from "/Users/ashfi/Desktop/react/react-components/src/assets/gmaillogo.jpg"
+import styles from "./footer.module.css"
+import footerLogo from "../../assets/header1logo.jpg"
+import gmaillogo from "../../assets/gmaillogo.jpg"
+import github from "../../assets/github.png"
+import linkedin from "../../assets/linkedin.png"
+
 
 const Footer = () => {
+    
     return (
         <div className={styles.footercontainer}>
             
@@ -27,9 +29,16 @@ const Footer = () => {
 
             <div className={styles.col}>
                 <div>
-                    <img src={fblogo} alt="fblogo"></img>
-                    <img src={instalogo} alt="instalogo" ></img>
+                    <a  href="https://github.com/AshfiM" target="__blank">
+                    <img src={github} alt="fblogo"></img>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ashfimohamed/" target="__blank">
+                    <img src={linkedin} alt="instalogo" ></img>
+                    </a>
+                    <a href="mailto:ashfimohamed@gmail.com">
                     <img src={gmaillogo} alt="gmailogo"></img>
+                    </a>
+      
                 </div>
             </div>
 
