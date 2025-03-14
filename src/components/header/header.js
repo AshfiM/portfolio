@@ -12,8 +12,9 @@ const Header = () => {
             </div>
             <div className={styles.linkbox}>
                 <Link to="/page1" className={styles.link}>About Me</Link>
-                <Link to="/page2" className={styles.link}>page2 </Link>
+                <Link to="/page2" className={styles.link}>Skills</Link>
                 <Link to="/page3" className={styles.link}>page3</Link>
+                <Link to="/page4" className={styles.link}>page4</Link>
                 
             </div>
         
