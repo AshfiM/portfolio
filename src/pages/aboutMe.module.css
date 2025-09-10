@@ -46,11 +46,13 @@
     font-size: 4vh;
     margin-top: 18vh;
     position: relative;
+    margin-left: 1vw;
 }
 
 .summary {
 line-height: 1.2;
 width: 70%;
+margin-left: 1vw;
 
 }
 

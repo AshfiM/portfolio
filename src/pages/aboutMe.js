@@ -12,7 +12,7 @@ import { useState } from "react"
 const AboutMe = () => {
     
     const [index, setIndex] = useState(0)
-    const sentances = ["Hi, I am Mohamed Ashfi", 'Computer Engineer']
+    const sentances = ["Hi, I am Mohamed Ashfi Uzama", 'Computer Engineer']
     const [typedSentances, setTypedSentances] = useState([])
     const [showLogos, setShowLogos] = useState(false)
 

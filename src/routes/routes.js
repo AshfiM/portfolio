@@ -17,7 +17,7 @@ const RoutesLogic = () => {
             <Route path="/aboutme" element={<AboutMe/>}></Route>
             <Route path='/skills' element={<Skills/>}></Route>
             <Route path='/projects' element={<Projects/>}></Route>
-            <Route path='/page4' element={<ContactMe/>}></Route>  
+            <Route path='/contactme' element={<ContactMe/>}></Route>  
             </Route>
             
             <Route element={<LayoutWithoutHeader/>}>

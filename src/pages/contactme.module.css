@@ -1,0 +1,92 @@
+.formContainer {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 80vh;
+    
+}
+
+.info {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2 ;
+    max-height: 10vh;
+    outline: 0px solid;
+}
+
+.info h1, h3 {
+    text-align: center;
+}
+
+.contactForm {
+    grid-column: 2;
+    grid-row: 1;
+    outline: 0px solid;
+    display: flex;
+    flex-direction: column;
+    margin-right: 0vw;
+    justify-content: center;
+    width: 75%;
+ 
+}
+.contactForm label {
+    margin-bottom: 1%;
+}
+.contactForm fieldset {
+    border: 0;
+}
+.contactForm div, button {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6%;
+    size: 2%;
+    min-width: 100%;   
+    border: none;
+
+}
+
+input {
+   padding: 2%;
+   border: none;
+   border-bottom: 2px rgb(134, 26, 134);
+   box-shadow: none;
+   background-color: rgb(179, 144, 179);
+}
+
+textarea {
+    padding: 5%;
+}
+
+button {
+    padding: 5%;
+    border-radius: 1%;
+    font-weight: bold;
+    font-size: large;
+}
+
+button:hover {
+    background-color: rgb(179, 144, 179);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.imgContainer {
+    grid-column: 1;
+    grid-row: 1;
+    width: 50vw;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+}
+
+.imgContainer img {
+    width: 50%;
+    height: 50%;
+    object-fit:fill;
+    border-radius: 50%;
+}
+
+
