@@ -1,9 +1,9 @@
 import React from "react"
 import { Routes, Route} from 'react-router-dom';
-import Page1 from '../pages/page1.js';
-import Page2 from '../pages/page2.js';
-import Page3 from '../pages/page3.js';
-import Page4 from "../pages/page4.js";
+import AboutMe from '../pages/aboutMe.js';
+import Skills from '../pages/skills.js';
+import Projects from '../pages/projects.js';
+import ContactMe from "../pages/contactMe.js";
 import Login from "../pages/login";
 import LayoutWithHeader from "./withheader";
 import LayoutWithoutHeader from "./withoutheader";
@@ -14,10 +14,10 @@ const RoutesLogic = () => {
 
         <Routes>
             <Route element={<LayoutWithHeader/>}>
-            <Route path="/page1" element={<Page1/>}></Route>
-            <Route path='/page2' element={<Page2/>}></Route>
-            <Route path='/page3' element={<Page3/>}></Route>
-            <Route path='/page4' element={<Page4/>}></Route>  
+            <Route path="/aboutme" element={<AboutMe/>}></Route>
+            <Route path='/skills' element={<Skills/>}></Route>
+            <Route path='/projects' element={<Projects/>}></Route>
+            <Route path='/page4' element={<ContactMe/>}></Route>  
             </Route>
             
             <Route element={<LayoutWithoutHeader/>}>

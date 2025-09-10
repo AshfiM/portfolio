@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./page2.module.css"
+import styles from "./skills.module.css"
 import DataBox from "../components/databox/databox"
 import python from "../assets/python.png"
 import c from "../assets/c.png"
@@ -9,7 +9,7 @@ import nodejs from "../assets/nodejs.png"
 import reactlogo from "../assets/react.svg.png"
 import flask from "../assets/flask.webp"
 
-const Page2 = () => {
+const Skills = () => {
 
     const skills = [
         {heading:"Programming", images:[python, c, java], names:["Python", "C", "Java"]}, 
@@ -32,4 +32,4 @@ const Page2 = () => {
     )
 }
 
-export default Page2;
+export default Skills;

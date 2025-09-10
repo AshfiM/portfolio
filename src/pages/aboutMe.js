@@ -1,18 +1,20 @@
-import React from "react"
-import styles from "./page1.module.css"
+
+import styles from "./aboutMe.module.css"
 import { Link } from "react-router-dom"
 import Typing from "../components/type/typing"
 import gmaillogo from "../assets/gmaillogo.jpg"
 import github from "../assets/github.png"
 import linkedin from "../assets/linkedin.png"
 import profile from "../assets/profile.jpeg"
+import list from "../assets/list.png"
 import { useState } from "react"
 
-const Page1 = () => {
+const AboutMe = () => {
     
     const [index, setIndex] = useState(0)
     const sentances = ["Hi, I am Mohamed Ashfi", 'Computer Engineer']
     const [typedSentances, setTypedSentances] = useState([])
+    const [showLogos, setShowLogos] = useState(false)
 
     const addSentance = () => {
         if (index < sentances.length) {
@@ -20,22 +22,33 @@ const Page1 = () => {
         setIndex(prevIndex => prevIndex + 1)
         }
     }
+
+    const handleClick = () => {
+       setShowLogos((prev) => !prev)
+        console.log(showLogos)
+
+    }
     const intro = typedSentances.map((line, i) => {
 
             return (<p key={i}>{line}</p>)
         })
-
         return (
             <div className={styles.page1}>
 
                 <div className={styles.introcontainer}>
                     <div className={styles.intro}>
-                    {intro}
-                    {index < sentances.length && (<Typing className={styles.introline} text={sentances[index]} onComplete={addSentance} maxCount={1}/>)} 
+                       
+                        <div>{intro}
+                        {index < sentances.length && (<Typing className={styles.introline} text={sentances[index]} onComplete={addSentance} maxCount={1}/>)} 
+                        
+
+                        </div>
+                        
+                        
                     </div >
                     <div className={styles.summary}>
                        {index === sentances.length && (
-                         <p>Motivated Computer Engineer with expertise in Python development, Web development and
+                         <p>Passionate Computer Engineer with expertise in Python development, Web development and
                          a strong foundation in various programming languages and technologies. Proven track record
                          in developing robust applications tailored to current industry needs. Passionate about Cyber
                          Security, Web development and committed to continuous learning and adaptation in a rapidly
@@ -43,11 +56,11 @@ const Page1 = () => {
                        )}
                     </div>
                     {index === sentances.length && (<div className={styles.linkcontainer}>
-                        <Link to="/page2" className={styles.link}>Skills</Link>
-                        <Link to="/page3" className={styles.link}>Projects</Link>
+                        <Link to="/skills" className={styles.link}>Skills</Link>
+                        <Link to="/projects" className={styles.link}>Projects</Link>
 
                     </div>)}
-                    {index === sentances.length &&(<div className={styles.logocontainer}>
+                    {index === sentances.length &&(<div className={`${styles.logocontainer} ${showLogos ? styles.show : styles.hide}`} id="logos">
                     <div className={styles.logobox}>
                         
                         <a href="mailto:ashfimohamed@gmail.com" target="__blank">
@@ -67,7 +80,14 @@ const Page1 = () => {
                         </a>
                     </div>
                     </div>)}
+                    <div className={styles.logotoggle}>
+                        <button onClick={handleClick} disabled={index < sentances.length}>
+                                <img src={list} className={styles.logos} alt="toggle"/>
+                        </button>
+                    </div>
                    </div>
+
+                  
 
                 <div className={styles.imagecontainer}>
                     
@@ -78,4 +98,4 @@ const Page1 = () => {
     }
 
 
-export default Page1;
+export default AboutMe;

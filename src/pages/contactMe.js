@@ -1,6 +1,6 @@
 import React from "react";
 
-const Page4 = () => {
+const ContactMe = () => {
     return (
         <div>
             page 4
@@ -8,4 +8,4 @@ const Page4 = () => {
     )
 }
 
-export default Page4;
+export default ContactMe;

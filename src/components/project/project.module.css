@@ -1,0 +1,43 @@
+.container {
+    width: 100%;
+    max-height:20vh;
+    border: 0px solid;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+}
+
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    
+}
+
+
+.title {
+    flex: 1 1 auto;
+    border: 0px solid;
+    width:40vw;
+    max-height: 5vh;
+    margin-left: 1vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    
+}
+.title h4 {
+    text-decoration: underline;
+    color: rgb(35, 22, 33);
+}
+.desc {
+    font: gray;
+    list-style-type: upper-roman;
+}
+
+.desc::marker {
+    content: normal;
+}

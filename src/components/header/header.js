@@ -1,20 +1,21 @@
-import React from "react"
+import React, { useState } from "react"
 import styles from "./headercss.module.css"
 import { Link } from 'react-router-dom';
-
-
+import logo from "../../assets/header1logo.jpg"
 const Header = () => {
+    const [open, setOpen] = useState(false);
     return (
         <div className={styles.container}>
 
             <div className={styles.logobox}>
-                
+                <img src={logo} alt="logo"></img>     
             </div>
+            
             <div className={styles.linkbox}>
-                <Link to="/page1" className={styles.link}>About Me</Link>
-                <Link to="/page2" className={styles.link}>Skills</Link>
-                <Link to="/page3" className={styles.link}>page3</Link>
-                <Link to="/page4" className={styles.link}>page4</Link>
+                <Link to="/aboutme" className={styles.link}>About Me</Link>
+                <Link to="/skills" className={styles.link}>Skills</Link>
+                <Link to="/projects" className={styles.link}>Projects</Link>
+                <Link to="/page4" className={styles.link}>Contact Me</Link>
                 
             </div>
         

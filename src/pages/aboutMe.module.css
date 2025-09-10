@@ -1,7 +1,7 @@
 .page1{
     display: grid;
     grid-template-columns: 70% 30%;
-    grid-template-rows: 82vh;
+    grid-template-rows: repeat(2, 40vh);
     background-color: rgb(242, 243, 244);
     border-radius: 1%;
 }
@@ -16,6 +16,18 @@
         transform: translateY(0px);
     }
 }
+
+@keyframes slideOut {
+    from {
+        opacity: 0;
+        transform: translateX(10px);
+    }    
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
 .introcontainer {
     grid-column: 1;
     outline: 0px solid;
@@ -27,11 +39,14 @@
 
 }
 
+
 .intro {
+    display: flex;
+    flex: 1 1 auto;
     font-size: 4vh;
     margin-top: 18vh;
+    position: relative;
 }
-
 
 .summary {
 line-height: 1.2;
@@ -91,14 +106,30 @@ width: 70%;
 .link:hover {
     background-color: burlywood;
 }
+
 .logocontainer {
-    position: absolute;
+    position: static;
     bottom: 0;
     left: 0;
     display: flex;
     width: 30%; 
+    flex: 1 1 auto;
 }
+/* Add these at the bottom or where appropriate in page1.module.css */
 
+.show {
+    display: flex !important;
+    animation: fadeIn 0s ease-in-out;
+  }
+  
+  .hide {
+    display: none !important;
+  }
+  
+
+.logotoggle {
+    display: none;
+}
 
 .logos {
     border: 6px rgb(70, 51, 87) solid;
@@ -111,7 +142,7 @@ width: 70%;
 
 .logos {
     opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .logos:hover {
@@ -121,6 +152,7 @@ width: 70%;
 .logobox {
     margin: 20px;
 }
+
 .imagecontainer {
     grid-column: 2;
     outline: 0px solid;
@@ -140,4 +172,96 @@ width: 70%;
 .imagecontainer img {
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
+}
+
+@media only screen and (max-width:600px){
+    .page1 {
+        grid-template-rows: repeat(2, 55vh);
+    }
+    .introcontainer {
+        grid-area: 1 / span 2;
+        grid-row: 2;
+        
+    }
+    .intro {
+        line-height: 1.2;
+        margin-top: 0;
+        text-align: stretch;
+    }
+
+    .intro > div {
+        width: 100%;
+    }
+
+    .summary {
+        grid-area: 1 / span 2;
+        width: 100%;
+    }
+
+    .linkcontainer {
+        grid-row: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0vw;
+    
+
+    }
+
+    .link {
+        padding: 6vw;
+        margin: 4vw;
+    }
+
+    .logocontainer {
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: absolute;
+        bottom: 10vh;
+        left: 0;
+        flex: 1 1 auto;
+        margin-bottom: 0vh;
+
+        
+        
+    }
+
+   
+
+    .logotoggle {
+        display: flex;
+        position: absolute;
+        bottom: 2vh;
+        left: 2vw;
+        
+    }
+
+    .logotoggle button {
+        border: 0;
+
+    }
+    
+    .imagecontainer {
+        
+        grid-column: 1; 
+        grid-row: 1;
+        grid-area: 1 / span 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        grid-template-rows: repeat(2, 21vh);        
+    }
+
+    .profile {
+        padding: 0;
+        margin: 0;
+    }
+
+
+    
+   
+    
 }

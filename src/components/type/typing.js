@@ -29,7 +29,7 @@ const Typing = (props) => {
    
     
 
-    return (<p>{text}</p>)
+    return (text)
 }
 
 export default Typing;
