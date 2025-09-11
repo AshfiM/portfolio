@@ -53,6 +53,7 @@ input {
 
 textarea {
     padding: 5%;
+    background-color: rgb(179, 144, 179);
 }
 
 button {
@@ -60,10 +61,11 @@ button {
     border-radius: 1%;
     font-weight: bold;
     font-size: large;
+    background-color: rgb(181, 158, 181);
 }
 
 button:hover {
-    background-color: rgb(179, 144, 179);
+    background-color: rgb(209, 198, 209);
 }
 
 button:hover {
