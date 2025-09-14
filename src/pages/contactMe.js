@@ -24,13 +24,14 @@ const ContactMe = () => {
 
     return (
         <div className={styles.formContainer}>
+        <div className={styles.imgContainer}>
+            <img src = {sideImage} alt="i"/>
+        </div>
             <div className={styles.info}>
                 <h1>
                     Connect With Me
                 </h1>
-                <h1>
-                    Get In Touch
-                </h1>
+            
             </div>
             <form className={styles.contactForm} onSubmit={handleSubmit}>
                 <fieldset>
@@ -54,9 +55,7 @@ const ContactMe = () => {
                     </button>
                 </fieldset>
             </form>
-        <div className={styles.imgContainer}>
-            <img src = {sideImage}/>
-        </div>
+        
         </div>
     )
 }

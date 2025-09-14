@@ -26,7 +26,7 @@ const Skills = () => {
     })
     
     return (
-        <div className={styles.page2}>
+        <div className={styles.skillsContainer}>
            {skillsSet}
         </div>
     )

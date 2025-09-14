@@ -66,11 +66,9 @@ button {
 
 button:hover {
     background-color: rgb(209, 198, 209);
-}
-
-button:hover {
     cursor: pointer;
 }
+
 
 .imgContainer {
     grid-column: 1;
@@ -91,4 +89,32 @@ button:hover {
     border-radius: 50%;
 }
 
+@media (max-width:768px){
+    .formContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+    }
+    .info {
+        margin-top: 0vh;
+        
+    }
+    .imgContainer {
+        height: fit-content;
+        margin-top: 2vh;
+    }
+    .button {
+        margin-bottom: 0px;
+    }
+    .imgContainer img {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 100%;
+        height: min-content;
+        object-fit: fill;
+    
+    }
+    
+}
 

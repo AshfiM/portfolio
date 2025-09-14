@@ -7,6 +7,7 @@
     border-radius: 1vw;
     margin: 0%;
     padding: 0%;
+    position: relative;
 }
 
 .logobox {
@@ -14,7 +15,8 @@
     flex: 0 0 auto;
     width: 10vw;
     height: 15vh;
-    min-width: 10vw;
+    min-width: 5vw;
+    min-height: 5vh;
     border: 0px solid purple;
     margin: 1vw;
     overflow: hidden;
@@ -33,6 +35,9 @@
     border-radius: 50%;
     border: 0px solid black;
 
+}
+.toggleButton {
+    display: none;
 }
 
 .linkbox {
@@ -59,14 +64,96 @@
     border: 2px solid gray;
     text-align: center;
     white-space: nowrap;
-    width: 6vw;
+    width: 10vw;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow:ellipsis;
     
    
 }
 .link:hover {
     background-color: rgb(83, 26, 122);
+}
+@media (max-width:768px) {
+    .linkbox {
+        display: none;
+        position: absolute;
+        top: 60%;
+        right: 0px;
+        z-index: 10;
+        margin-right: 4vw;
+        border: 1px solid;
+        margin-top: 0px;
+        height: fit-content;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(0%); 
+        padding-top: 0px;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        border-radius: 3px;
+        box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
+        border: 2px purple;
+        background: transparent;
+    }
+   
+    .toggleButton {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 5vh;
+        right: -39vw;
+        background: none;
+        border: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+
+    .toggleButton span {
+        display: block;
+        background: rgb(108, 3, 126); 
+        height:4px;
+        width: 100%;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        border-radius: 2px;
+
+    }
+
+    .logobox {
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        width:40%;
+    }
+    .logobox img {
+        
+        width: 100%;
+        height: min-content;
+        object-fit: fill;
+    
+    }
+
+    .linkbox.showMenu {
+        display: flex;
+        flex-direction: column;
+        max-height: 500px;
+        
+    }
+
+    .link {
+        width: 100%;
+        text-align:center;
+        background-color: aliceblue;
+        border-radius: 5px;
+        margin-bottom: 0px;
+        margin-top: 3px;
+        padding: 2vw;
+        background: rgba(255, 255, 255, 0.2);
+    }
+    .link:hover {
+        background: rgba(86, 65, 88, 0.285);
+    }
 }
 
 .buttonbox {
@@ -96,10 +183,6 @@
 .dropdowncontainer {
     grid-column: 2;
     grid-row: 1;
-
-}
-
-.dropdownbutton {
 
 }
 

@@ -60,7 +60,7 @@ margin-left: 1vw;
 .summary p {
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
-    text-align: justify;
+    text-align:justify;
 }
 .buttoncontainer {
     width: 30%;
@@ -198,6 +198,7 @@ margin-left: 1vw;
     .summary {
         grid-area: 1 / span 2;
         width: 100%;
+
     }
 
     .linkcontainer {
