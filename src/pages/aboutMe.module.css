@@ -197,7 +197,10 @@ margin-left: 1vw;
 
     .summary {
         grid-area: 1 / span 2;
-        width: 100%;
+        width: fit-content;
+        text-align: center;
+        margin-right: 1vw;
+        align-items: center;
 
     }
 

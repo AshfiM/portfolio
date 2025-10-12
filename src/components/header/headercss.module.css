@@ -67,6 +67,7 @@
     width: 10vw;
     overflow: hidden;
     text-overflow:ellipsis;
+    background:-moz-element()
     
    
 }

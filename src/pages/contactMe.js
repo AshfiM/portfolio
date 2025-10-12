@@ -5,33 +5,35 @@ import { useState } from "react"
 const ContactMe = () => {
 
     const [formData, setFormData] = useState({
-        fullname:"",
-        email:"",
-        message:""
+        fullname: "",
+        email: "",
+        message: ""
     })
-    
+
     const handleChange = (e) => {
-        const {name,value} = e.target
-        setFormData({...formData, [name]:value})
+        const { name, value } = e.target
+        setFormData({ ...formData, [name]: value })
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
         alert("submitted")
-        setFormData({fullname:"", email:"", message:""})
+        setFormData({ fullname: "", email: "", message: "" })
     }
 
     return (
         <div className={styles.formContainer}>
-        <div className={styles.imgContainer}>
-            <img src = {sideImage} alt="i"/>
-        </div>
+            <div className={styles.imgContainer}>
+                <img src={sideImage} alt="i" />
+            </div>
             <div className={styles.info}>
                 <h1>
                     Connect With Me
                 </h1>
-            
+            </div>
+            <div>
+                
             </div>
             <form className={styles.contactForm} onSubmit={handleSubmit}>
                 <fieldset>
@@ -44,18 +46,18 @@ const ContactMe = () => {
                         <label htmlFor="email">Email</label>
                         <input type="email" id="email" value={formData.email} onChange={handleChange} name="email" required></input>
                     </div>
-                    
+
                     <div>
                         <label htmlFor="message">Message</label>
-                        <textarea id="message" value={formData.message} onChange={handleChange} name="message"required></textarea>
+                        <textarea id="message" value={formData.message} onChange={handleChange} name="message" required></textarea>
                     </div>
-                    
+
                     <button type="submit" >
                         Send
                     </button>
                 </fieldset>
             </form>
-        
+
         </div>
     )
 }

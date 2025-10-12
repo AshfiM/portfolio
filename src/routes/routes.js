@@ -1,5 +1,5 @@
 import React from "react"
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route, Navigate} from 'react-router-dom';
 import AboutMe from '../pages/aboutMe.js';
 import Skills from '../pages/skills.js';
 import Projects from '../pages/projects.js';
@@ -14,6 +14,7 @@ const RoutesLogic = () => {
 
         <Routes>
             <Route element={<LayoutWithHeader/>}>
+            <Route path="/" element={<Navigate to='aboutme'/>}></Route>
             <Route path="/aboutme" element={<AboutMe/>}></Route>
             <Route path='/skills' element={<Skills/>}></Route>
             <Route path='/projects' element={<Projects/>}></Route>
@@ -21,7 +22,7 @@ const RoutesLogic = () => {
             </Route>
             
             <Route element={<LayoutWithoutHeader/>}>
-                <Route path="/" element={<Login/>}></Route>
+                <Route path="/login" element={<Login/>}></Route>
                 <Route path="/signup" element={<Signup/>}></Route>
 
             </Route>
