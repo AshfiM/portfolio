@@ -1,6 +1,6 @@
 
 import Project from "../components/project/project";
-import styles from "./projects.module.css"
+
 
 const Projects = () => {
     const projects_list = [
