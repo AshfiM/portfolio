@@ -2,11 +2,7 @@
 import styles from "./aboutMe.module.css"
 import { Link } from "react-router-dom"
 import Typing from "../components/type/typing"
-import gmaillogo from "../assets/gmaillogo.jpg"
-import github from "../assets/github.png"
-import linkedin from "../assets/linkedin.png"
 import profile from "../assets/profile.jpeg"
-import list from "../assets/list.png"
 import { useState } from "react"
 
 const AboutMe = () => {
@@ -14,7 +10,6 @@ const AboutMe = () => {
     const [index, setIndex] = useState(0)
     const sentances = ["Hi, I am Mohamed Ashfi Uzama", 'Computer Engineer']
     const [typedSentances, setTypedSentances] = useState([])
-    const [showLogos, setShowLogos] = useState(false)
 
     const addSentance = () => {
         if (index < sentances.length) {
@@ -23,11 +18,7 @@ const AboutMe = () => {
         }
     }
 
-    const handleClick = () => {
-       setShowLogos((prev) => !prev)
-        console.log(showLogos)
-
-    }
+ 
     const intro = typedSentances.map((line, i) => {
 
             return (<p key={i}>{line}</p>)
@@ -60,31 +51,8 @@ const AboutMe = () => {
                         <Link to="/projects" className={styles.link}>Projects</Link>
 
                     </div>)}
-                    {index === sentances.length &&(<div className={`${styles.logocontainer} ${showLogos ? styles.show : styles.hide}`} id="logos">
-                    <div className={styles.logobox}>
-                        
-                        <a href="mailto:ashfimohamed@gmail.com" target="__blank">
-                            <img src={gmaillogo} className={styles.logos} alt="mail"/>
-                        </a>
-                    </div>
-                    <div className={styles.logobox}>
-                        
-                        <a href="https://www.linkedin.com/in/ashfimohamed/" target="__blank">
-                        <img src={linkedin} className={styles.logos} alt="linkedin"/>
-                        </a>
-                    </div>
-                    <div className={styles.logobox}>
-                        
-                        <a href="https://github.com/AshfiM" target="__blank">
-                        <img src={github} className={styles.logos} alt="github"/>
-                        </a>
-                    </div>
-                    </div>)}
-                    <div className={styles.logotoggle}>
-                        <button onClick={handleClick} disabled={index < sentances.length}>
-                                <img src={list} className={styles.logos} alt="toggle"/>
-                        </button>
-                    </div>
+                    
+                   
                    </div>
 
                   
