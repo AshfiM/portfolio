@@ -4,24 +4,9 @@ import sideImage from "../../src/assets/header1logo.jpg"
 import { useState } from "react"
 const ContactMe = () => {
 
-    const [formData, setFormData] = useState({
-        fullname: "",
-        email: "",
-        message: ""
-    })
 
-    const handleChange = (e) => {
-        const { name, value } = e.target
-        setFormData({ ...formData, [name]: value })
-    }
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        console.log(formData)
-
-        alert("submitted")
-        setFormData({ fullname: "", email: "", message: "" })
-    }
+  
 
     return (
         <div className={styles.formContainer}>

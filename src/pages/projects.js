@@ -4,32 +4,37 @@ import styles from "./projects.module.css"
 const Projects = () => {
     const projects_list = [
         {"title":"Url Shortener",
-        "desc":"Jdbc template, Url encoding, Dockerizing, Profiling, AWS RDS database integrating, Caching, Serializing,\
-        AWS Redis OSS cache integrating, BeanStalk Deploying, Thymeleaf Integrating Jdbc template, Url encoding, Dockerizing, Profiling, AWS RDS database integrating, Caching, Serializing, \
-AWS Redis OSS cache integrating, BeanStalk Deploying, Thymeleaf Integrating",
+        "desc":`Jdbc template, Url encoding, Dockerizing, Profiling, AWS RDS database integrating, Caching, Serializing,
+        AWS Redis OSS cache integrating, BeanStalk Deploying, Thymeleaf Integrating Jdbc template, Url encoding, Dockerizing, Profiling, AWS RDS database integrating, Caching, Serializing,
+AWS Redis OSS cache integrating, BeanStalk Deploying, Thymeleaf Integrating`,
         "image":"/images/urlShortener.png",
+        "imageName":"urlShortener",
         "git_url":"https://github.com/AshfiM/url-shortner.git"
         },
         {"title":"E-Commerce REST API ",
         "desc":"Jwt system, Roll based access, Pagination, Table Joining",
         "image":"/images/eCommerce.png",
+        "imageName":"ecommerceAPI",
         "git_url":"https://github.com/AshfiM/destinations-app.git"
         },
         {"title":"Destinations & Reviews CRUD API ",
-        "desc":"Implementing One to Many relationship, Custom Repository Method by name, Delete reviews on deleting\
-destination, Global Exception Handling",
+        "desc":`Implementing One to Many relationship, Custom Repository Method by name, Delete reviews on deleting
+destination, Global Exception Handling`,
         "image":"/images/destination.png",
+        "imageName":"destinationsAPI",
         "git_url":" https://github.com/AshfiM/destinations-app.git/Users/ashfi/Downloads/destination.png"
         },
          {"title":"JWT Authentication API",
-        "desc":"Spring Security, Password encoding using BcryptPasswordEncoder, Configuration component, Security Chain\
-Filter, Header based Jwt, Cookie Based Jwt System",
+        "desc":`Spring Security, Password encoding using BcryptPasswordEncoder, Configuration component, Security Chain
+Filter, Header based Jwt, Cookie Based Jwt System`,
         "image":"/images/jwtAuth.png",
+        "imageName":"hwtAuthenticationAPI",
         "git_url":"https://github.com/AshfiM/spring-boot-authentication-api.git"
         },
             {"title":"To Do List MVC App ",
-        "desc":"Spring Boot, Spring MVC , Spring Data JPA, React - useState, fetch func, useEffect, conditional rendering.",
+        "desc":`Spring Boot, Spring MVC , Spring Data JPA, React - useState, fetch func, useEffect, conditional rendering.`,
         "image":"/images/todolist.png",
+        "imageName":"todoListAPI",
         "git_url":"https://github.com/AshfiM/to-do-list-spring-boot-api.git"
         },
         
