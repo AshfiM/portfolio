@@ -49,7 +49,7 @@ Filter, Header based Jwt, Cookie Based Jwt System`,
                     </div>
                     <hr></hr>
                     <div className={styles.imgCon}>
-                        <img src={project.image}  className={styles.projImg}></img>
+                        <img src={project.image}  className={styles.projImg} alt={project.imageName}></img>
                     </div>
                     <hr></hr>
                     <div className={styles.projDesCon}>
