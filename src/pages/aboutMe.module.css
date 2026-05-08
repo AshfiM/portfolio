@@ -1,9 +1,9 @@
 .page1{
     display: grid;
     grid-template-columns: 70% 30%;
-    grid-template-rows: repeat(2, 40vh);
     background-color: rgb(242, 243, 244);
     border-radius: 1%;
+    min-height: 81vh;
 }
 @keyframes fadeIn {
     from {
@@ -30,29 +30,30 @@
 }
 .introcontainer {
     grid-column: 1;
-    outline: 0px solid;
+    grid-row: 1;
     width: 100%;
-    line-height: 0.1;
     text-align: start;
     position: relative;
-    
-
+    line-height: 1.4;
+    padding: 1%;
+    margin-bottom: 2vh;
 }
-
 
 .intro {
     display: flex;
-    flex: 1 1 auto;
+    flex-direction: column;
     font-size: 4vh;
     margin-top: 18vh;
-    position: relative;
     margin-left: 1vw;
+    gap: 10px;
 }
 
 .summary {
 line-height: 1.2;
 width: 70%;
 margin-left: 1vw;
+margin-top: 1vh;
+margin-bottom: 1vh;
 
 }
 
@@ -89,20 +90,20 @@ margin-left: 1vw;
 }
 
 .link {
+    color: black;
     padding: 1%;
-    outline: 0px solid;
+    outline: 1px solid;
     border-radius: 0.3vw;
     margin-right: 3vw;
     text-decoration: none;
     cursor: pointer;
     border: none;
     border-radius: 0.5vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    background-attachment: fixed;
-    background-color: azure;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background: linear-gradient(to right, rgb(118, 92, 157), rgb(145, 142, 149));
 }
 
 .link:hover {
@@ -176,18 +177,38 @@ margin-left: 1vw;
     animation: fadeIn 1s ease-in forwards;
 }
 
+.eduCon {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: start;
+    margin-top: 8vh;
+    margin-left: 2vw;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    padding: 2%;
+    border-radius: 1vw;
+}
+
 @media only screen and (max-width:600px){
     .page1 {
-        grid-template-rows: repeat(2, 55vh);
+        display: flex;
+        min-width: 100%;
+        flex-direction: column;
+        padding: 5% 0% 5% 0%;
+        align-items: center;
+        justify-items: center;
     }
+    
     .introcontainer {
-        grid-area: 1 / span 2;
-        grid-row: 2;
-        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .intro {
         line-height: 1.2;
-        margin-top: 0;
+        margin-top: 2vh;
         text-align: stretch;
     }
 
@@ -200,24 +221,29 @@ margin-left: 1vw;
         width: fit-content;
         text-align: center;
         margin-right: 1vw;
-        align-items: center;
+        padding: 2% 2% 0% 0%;
 
     }
 
     .linkcontainer {
         grid-row: 2;
         display: flex;
+        flex-direction:column;
         justify-content: center;
         align-items: center;
-        padding: 0vw;
-    
 
     }
 
     .link {
-        padding: 6vw;
+       
+        width: 20vw;
+        height: 5vh;
+        padding: 1% 4% 1% 4%;
         margin: 4vw;
+        text-align: center;
+        text-justify: auto;
     }
+
 
     .logocontainer {
         display: none;

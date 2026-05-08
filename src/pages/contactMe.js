@@ -18,6 +18,7 @@ const ContactMe = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
+
         alert("submitted")
         setFormData({ fullname: "", email: "", message: "" })
     }
@@ -27,14 +28,22 @@ const ContactMe = () => {
             <div className={styles.imgContainer}>
                 <img src={sideImage} alt="i" />
             </div>
+    
             <div className={styles.info}>
                 <h1>
                     Connect With Me
                 </h1>
+                 <div>
+                <div className={styles.contactInfo}>
+                    <p>Name : Mohamed Ashfi Uzama</p>
+                    <p>E-mail: ashfimohamed@gmail.com</p>
+                    <p>LinkedIn: https://www.linkedin.com/in/ashfimohamed/</p>
+                </div>
             </div>
-            <div>
-                
+
             </div>
+          
+            {/*
             <form className={styles.contactForm} onSubmit={handleSubmit}>
                 <fieldset>
                     <div>
@@ -57,6 +66,8 @@ const ContactMe = () => {
                     </button>
                 </fieldset>
             </form>
+             */}
+
 
         </div>
     )

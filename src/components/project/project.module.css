@@ -36,6 +36,7 @@
 .desc {
     font: gray;
     list-style-type: upper-roman;
+    min-width: max-content;
 }
 
 .desc::marker {
